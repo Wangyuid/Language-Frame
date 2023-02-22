@@ -16,9 +16,10 @@
         let button = document.querySelectorAll('button')
         let h3 = document.querySelector('h3')
         button[0].addEventListener('click', function () {
-            let time = setInterval(function () {
+            time = setInterval(function () {
                 let x = h3.style.fontsize
-                h3.style.fontsize = x + 10
+                x = parseInt(x)
+                h3.style.fontsize = x + 10 + 'px'
             }, 500)
         })
         button[1].addEventListener('click', function () {
