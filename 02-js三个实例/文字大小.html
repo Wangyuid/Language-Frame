@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文字大小</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            margin: 30px auto;
+            text-align: center;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        p {
+            display: block;
+            width: 600px;
+            border: 1px solid yellow;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>用JvaScript改变网页中字号</h1>
+    <h3>选择字号【 <a href="#" id="a">小</a> <a href="#" id="b">中</a> <a href="#" id="c">大</a>】</h3>
+    <p>JavaScript是一种能让你的网页更加生动活泼的程式语言，也是目前网页中设计中最容易学又最方便的语言。
+        你可以利用JavaScript轻易的做出亲切的欢迎讯息、漂亮的数字钟、有广告效果的跑马灯及简易的选举，还可
+        以显示浏览器停留的时间。让这些特殊效果提高网页的可观性。
+    </p>
+    <script>
+        let a = document.querySelector('#a')
+        let b = document.querySelector('#b')
+        let c = document.querySelector('#c')
+        let p = document.querySelector('p')
+        a.addEventListener('click', function () {
+            p.style.fontSize = '16px'
+        })
+        b.addEventListener('click', function () {
+            p.style.fontSize = '20px'
+        })
+        c.addEventListener('click', function () {
+            p.style.fontSize = '36px'
+        })
+    </script>
+</body>
+
+</html>

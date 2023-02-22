@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>累加和</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #all {
+            width: 600px;
+            height: 400px;
+            margin: 10px auto;
+            border: 15px solid green;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+            margin: 20px auto;
+        }
+
+        .first,
+        .second {
+            text-align: center;
+            margin: 20px auto;
+        }
+
+        .third {
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        button {
+            margin-left: 30px;
+            width: 60px;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="all">
+        <h1>计算任意区间内自然数的累加和</h1>
+        <h2>定义区间</h2>
+        <div class="first">
+            起始数：<input type="text" id="a">
+            终止数：<input type="text" id="b">
+        </div>
+        <div class="second">
+            累加和：<input type="text" id="c">
+        </div>
+        <div class="third">
+            <button id="d">计算</button>
+            <button id="e">清空</button>
+        </div>
+    </div>
+    <script>
+        let a = document.querySelector('#a')
+        let b = document.querySelector('#b')
+        let c = document.querySelector('#c')
+        let d = document.querySelector('#d')
+        let e = document.querySelector('#e')
+        d.addEventListener('click', function () {
+            let sum = 0
+            if (a.value < b.value) {
+                for (let i = +a.value; i <= +b.value; i++) {
+                    sum += i
+                }
+            } else {
+                alert('起始数必须小于终止数，请重输！')
+            }
+            c.value = sum
+        })
+        e.addEventListener('click', function () {
+            a.value = b.value = c.value = ''
+        })
+    </script>
+</body>
+
+</html>
