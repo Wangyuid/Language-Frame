@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鼠标经过导航</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        [class*=col] {
+            background-color: #f0f8ff;
+            text-align: center;
+            height: 50px;
+            line-height: 50px;
+        }
+
+        [class*=col]:hover {
+            background-color: #0985f0;
+        }
+
+        li:hover {
+            background-color: #0985f0;
+        }
+
+        .row {
+            position: relative;
+        }
+
+        ul {
+            position: absolute;
+            top: 50px;
+            left: 760px;
+            list-style: none;
+            display: none;
+        }
+
+        li {
+            width: 190px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">首页</div>
+            <div class="col-md-2">公开课</div>
+            <div class="col-md-2">直播课</div>
+            <div class="col-md-2">金课</div>
+            <div class="col-md-2 select">免费课程</div>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+            </ul>
+            <div class="col-md-2">关于我们</div>
+
+        </div>
+    </div>
+    <script>
+        let select = document.querySelector('.select')
+        let ul = document.querySelector('ul')
+        select.addEventListener('mouseenter', function () {
+            ul.style.display = 'block'
+            select.style.backgroundColor = '#0985f0'
+            select.addEventListener('mouseleave', function () {
+                ul.style.display = 'none'
+                select.style.backgroundColor = '#f0f8ff'
+            })
+            ul.addEventListener('mouseleave', function () {
+                ul.style.display = 'none'
+                select.style.backgroundColor = '#f0f8ff'
+            })
+        })
+        ul.addEventListener('mousemove', function () {
+            ul.style.display = 'block'
+            select.style.backgroundColor = '#0985f0'
+        })
+    </script>
+    <script src="./js/jquery-3.6.3.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
