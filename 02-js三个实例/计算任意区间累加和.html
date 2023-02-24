@@ -20,11 +20,7 @@
         }
 
         h1,
-        h2 {
-            text-align: center;
-            margin: 20px auto;
-        }
-
+        h2,
         .first,
         .second {
             text-align: center;
@@ -49,36 +45,53 @@
         <h1>计算任意区间内自然数的累加和</h1>
         <h2>定义区间</h2>
         <div class="first">
-            起始数：<input type="text" id="a">
-            终止数：<input type="text" id="b">
+            起始数：<input type="text">
+            终止数：<input type="text">
         </div>
         <div class="second">
-            累加和：<input type="text" id="c">
+            累加和：<input type="text">
         </div>
         <div class="third">
-            <button id="d">计算</button>
-            <button id="e">清空</button>
+            <button>计算</button>
+            <button>清空</button>
         </div>
     </div>
     <script>
-        let a = document.querySelector('#a')
-        let b = document.querySelector('#b')
-        let c = document.querySelector('#c')
-        let d = document.querySelector('#d')
-        let e = document.querySelector('#e')
-        d.addEventListener('click', function () {
+        // let a = document.querySelector('#a')
+        // let b = document.querySelector('#b')
+        // let c = document.querySelector('#c')
+        // let d = document.querySelector('#d')
+        // let e = document.querySelector('#e')
+        // d.addEventListener('click', function () {
+        //     let sum = 0
+        //     if (a.value < b.value) {
+        //         for (let i = +a.value; i <= +b.value; i++) {
+        //             sum += i
+        //         }
+        //     } else {
+        //         alert('起始数必须小于终止数，请重输！')
+        //     }
+        //     c.value = sum
+        // })
+        // e.addEventListener('click', function () {
+        //     a.value = b.value = c.value = ''
+        // })
+        let input = document.querySelectorAll('input')
+        let button = document.querySelectorAll('button')
+        button[0].addEventListener('click', function () {
             let sum = 0
-            if (a.value < b.value) {
-                for (let i = +a.value; i <= +b.value; i++) {
+            if (input[0].value < input[1].value && input[0].value > 0 && input[1].value > 0) {
+                for (let i = +input[0].value; i <= +input[1].value; i++) {
                     sum += i
+                    input[2].value = sum
                 }
             } else {
                 alert('起始数必须小于终止数，请重输！')
+                input[0].value = input[1].value = input[2].value = ''
             }
-            c.value = sum
         })
-        e.addEventListener('click', function () {
-            a.value = b.value = c.value = ''
+        button[1].addEventListener('click', function () {
+            input[0].value = input[1].value = input[2].value = ''
         })
     </script>
 </body>
