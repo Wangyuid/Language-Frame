@@ -6,20 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="./vue.js"></script>
 </head>
 
 <body>
     <script>
-        let person = {
-            name: 'John',
-            sex: '男',
-        }
-        Object.defineProperty(person, 'age', {
-            value: 20,
-            enumerable: true,//控制是否能枚举，默认是false
-            writable: true,//控制是否能够修改
-        }
-        )
+        // let person = {
+        //     name: 'John',
+        //     sex: '男',
+        // }
+        // Object.defineProperty(person, 'age', {
+        //     value: 20,
+        //     enumerable: true,//控制是否能枚举，默认是false
+        //     writable: true,//控制是否能够修改
+        // }
+        // )
+        let d1 = { x: 100 }
+        let d2 = { y: 208 }
+        Object.defineProperty(d2, 'x', {
+            get() {
+                return d1.x
+            },
+            set(value) {
+                d1.x = value
+            },
+        })
     </script>
 </body>
 

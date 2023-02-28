@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="./vue.js"></script>
+    </head>
+
+    <body>
+        <div id="root">
+            <h2>{{name}}</h2>
+            <!-- 普通写法 -->
+            <button v-on:click="show">点我</button>
+            <!-- 阻止默认事件 -->
+            <a href="http://www.sdbi.edu.cn" @click.prevent="show">点我</a>
+            <!-- 阻止冒泡 -->
+            <div class="demo" @click="show">
+                <button @click.stop="show">点我</button>
+            </div>
+            <!-- 事件只能触发一次 -->
+            <button @click.once="show">点我</button>
+        </div>
+        <script>
+            Vue.config.production = false
+
+            new Vue({
+                el: '#root',
+                data: {
+                    name: '信息工程学院',
+                },
+                methods: {
+                    show(e) {
+                        // e.preventDefault()
+                        alert('欢迎你')
+                    }
+                },
+            })
+        </script>
+    </body>
+
+    </html>
+</body>
+
+</html>

@@ -12,14 +12,16 @@
 <body>
     <div id="root">
         <h2>{{name}}</h2>
+        <h2>{{address}}</h2>
     </div>
     <script>
-        Vue.config.production = false;
-        new Vue({
-            el: "#root",
+        Vue.config.production = false
+        const vm = new Vue({
+            el: '#root',
             data: {
-                name: '信息',
-            }
+                name: '信息工程学院',
+                address: 'e501',
+            },
         })
     </script>
 </body>
