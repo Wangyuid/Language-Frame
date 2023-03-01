@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        [class*=col] {
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col-md-2" style="background-color: green;">2</div>
+            <div class="col-md-2 offset-md-1" style="background-color: purple;">8</div>
+            <div class="col-md-2" style="background-color: pink;">2</div>
+        </div>
+    </div> -->
+    <div class="container">
+        <div class="row">
+            <div class="col">a</div>
+            <div class="col order-7">b</div>
+            <div class="col">c</div>
+            <div class="col">d</div>
+            <div class="col order-2">e</div>
+        </div>
+        <div class="row">
+            <div class="col order-last">1</div>
+            <div class="col ">2</div>
+            <div class="col order-first">3</div>
+        </div>
+    </div>
+    <script src="./js/jquery-3.6.3.min.js"></script>
+    <script src="./bootstrap/css/bootstrap.min.css"></script>
+</body>
+
+</html>

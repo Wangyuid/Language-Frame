@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.min.css" />
+    <style type="text/css">
+        [class*="col"] {
+            background-color: gray;
+            text-align: center;
+        }
+
+        [class*="col"]:hover {
+            background-color: blue;
+        }
+
+        a {
+            color: black;
+        }
+
+        a:hover {
+            color: white;
+        }
+
+        .act:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu {
+            margin-top: 0px;
+        }
+
+        .dropdown-menu a {
+            width: 190px;
+            height: 40px;
+            text-align: center;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: blue;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <ul class="nav nav-pills row">
+            <li class="nav-item col-lg-2">
+                <a class="nav-link" href="#">首页</a>
+            </li>
+            <li class="nav-item  col-lg-2">
+                <a class="nav-link" href="#">公开课</a>
+            </li>
+            <li class="nav-item col-lg-2">
+                <a class="nav-link" href="#">直播课</a>
+            </li>
+            <li class="nav-item col-lg-2">
+                <a class="nav-link" href="#">金课</a>
+            </li>
+            <li class="nav-item col-lg-2 act">
+                <a class="nav-link " href="#">免费课程</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">HTML</a>
+                    <a class="dropdown-item" href="#">CSS</a>
+                    <a class="dropdown-item" href="#">Javascript</a>
+                </div>
+            </li>
+            <li class="nav-item col-lg-2">
+                <a class="nav-link" href="#">关于我们</a>
+            </li>
+        </ul>
+    </div>
+
+    <script src="./js/jquery-3.6.3.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>
