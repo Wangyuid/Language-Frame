@@ -11,15 +11,22 @@
 
 <body>
     <div id="root">
-        <h2>{{name}}</h2>
+        <h2>{{name}}欢迎你!</h2>
+        <input type="text" placeholder="按回车键确认输出" @keyup.enter="show">
     </div>
     <script>
         Vue.config.productionTip = false;
         new Vue({
             el: "#root",
             data: {
-                name: '信息',
-            }
+                name: '山东商务职业学院',
+            },
+            methods: {
+                show(e) {
+                    // if (e.keyCode !== 13) return
+                    console.log(e.target.value)
+                },
+            },
         })
     </script>
 </body>
