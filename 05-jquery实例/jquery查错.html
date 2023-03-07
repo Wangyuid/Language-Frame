@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.3.min.js"></script>
+</head>
+
+<body>
+    <button id="btn">点我</button>
+    <script>
+        // document.write($('#bttn'))//无法查错
+        //通过测试元素个数查看jquery对象
+        // document.write($('#btn').length + '<br>')
+        // document.write($('#btn').length)
+        // jQuery('#btn').click(function () {
+        //     alert('hello')
+        // })
+        $(function () {
+            $('#btn').click(function () {
+                alert('hello')
+            })
+        })
+        $(function () {
+            $('#btn').click(function () {
+                alert('hi')
+            })
+        })
+    </script>
+</body>
+
+</html>
