@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <h1>点击按钮修改名字</h1>
+        <p>{{message}}</p>
+        <button v-on:click="show">点我改名</button>
+    </div>
+    <script>
+        Vue.config.productionTip = false;
+        new Vue({
+            el: "#root",
+            data: {
+                name: true
+            },
+            computed: {
+                message() {
+                    return this.name ? '张三' : '李四'
+                }
+            },
+            methods: {
+                show() {
+                    this.name = !this.name
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>

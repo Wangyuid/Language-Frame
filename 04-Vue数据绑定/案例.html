@@ -34,6 +34,15 @@
                     get() {
                         return this.surName + this.name
                     },
+                    set(value) {
+                        console.log('set', value)
+                        const arr = value.split('-')
+                        this.serName = arr[0]
+                        this.name = arr[1]
+                    },
+                },
+                fullName() {
+                    return this.surName + this.name
                 }
             },
         })
