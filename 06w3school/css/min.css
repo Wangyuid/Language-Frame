@@ -6,3 +6,69 @@
 .bg-logo {
     background-color: #fdfcf8;
 }
+
+.main-nav {
+    background-color: #eee;
+    list-style: none;
+    padding: 15px 0;
+    font-size: 18px;
+    margin: 0;
+}
+
+.main-nav li {
+    display: inline;
+}
+
+.main-nav a {
+    color: #999;
+    padding: 15px 20px;
+}
+
+.main-nav a:hover {
+    background-color: #444;
+    color: #fff;
+    text-decoration: none;
+}
+
+#leftside,
+#rightside {
+    font-size: 12px;
+    width: 178px;
+    border-left: 1px solid#ccc;
+    border-right: 1px solid #ccc;
+    padding-top: 15px;
+}
+
+#leftside h3,
+#rightside h3 {
+    margin: 10px 0 5px 8px;
+}
+
+#leftside ul,
+#rightside ul {
+    list-style-type: none;
+}
+
+#leftside a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    padding: 5px 0 5px 15px;
+}
+
+#leftside a:hover {
+    background-color: #999;
+    color: #fff;
+}
+
+#rightside a {
+    color: #930;
+    display: block;
+    text-decoration: none;
+    padding: 5px 0 5px 15px;
+}
+
+#rightside a:hover {
+    background-color: #999;
+    color: #fff;
+}
