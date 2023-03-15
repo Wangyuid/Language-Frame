@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <h3>我今天的心情很{{status}}</h3>
+        <button @click="change">切换心情状态</button>
+        <h3>x的值是{{numbers.x}}</h3>
+        <button @click="numbers.x++">点击按钮实现x+1效果</button>
+        <h3>a的值是{{numbers.y.a}}</h3>
+        <button @click="numbers.y.a++">点击按钮实现a+1效果</button>
+    </div>
+    <script>
+        Vue.config.productionTip = false;
+        const vm = new Vue({
+            el: "#root",
+            data: {
+                isHappy: true,
+                numbers: {
+                    x: 1,
+                    y: {
+                        a: 3,
+                        b: 4,
+                    }
+                },
+            },
+            computed: {
+                status() {
+                    return this.isHappy ? '高兴' : '伤心'
+                }
+            },
+            methods: {
+                change() {
+                    this.isHappy = !this.isHappy
+                },
+            },
+            watch: {//写在data和computed里的都可以被监听
+                // isHappy: {
+                //     // immediate: true,
+                //     handler(newValue, oldValue) {
+                //         console.log('isHappy修改了', newValue, oldValue)
+                //     }
+                // },
+                // status: {
+                //     immediate: true,
+                //     handler(newValue, oldValue) {
+                //         console.log('status修改了', newValue, oldValue)
+                //     }
+                // },
+                // 'numbers.x': {
+                //     handler(newValue, oldValue) {
+                //         console.log('x修改了', newValue, oldValue)
+                //     }
+                // },
+                numbers: {
+                    deep: true,
+                    handler() {
+                        console.log('a修改了')
+                    }
+                },
+            },
+        })
+        //监听属性第二种写法
+        // vm.$watch('isHappy', {
+        //     immediate: true,
+        //     handler(newValue, oldValue) {
+        //         console.log('status修改了', newValue, oldValue)
+        //     },
+        // })
+    </script>
+</body>
+
+</html>

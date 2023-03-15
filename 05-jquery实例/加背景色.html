@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.3.min.js"></script>
+</head>
+
+<body>
+    <div id="byDiv">1</div>
+    <p>1</p>
+    <p class="byClass">1</p>
+    <div class="byClass">1</div>
+    <script>
+        $('#byDiv,.byClass').css('backgroundColor', 'yellow')
+    </script>
+    <script>
+        $('#one').css('backgroundColor', 'red')
+        $('p').css('backgroundColor', '#bbffaa')
+        $('p').css('color', 'red')
+        $('h1,#one').css('backgroundColor', '#bbffaa')
+    </script>
+</body>
+
+</html>

@@ -21,7 +21,7 @@
 
 .main-nav a {
     color: #999;
-    padding: 15px 20px;
+    padding: 15px 32px;
 }
 
 .main-nav a:hover {
@@ -37,6 +37,10 @@
     border-left: 1px solid#ccc;
     border-right: 1px solid #ccc;
     padding-top: 15px;
+}
+
+#rightside {
+    margin-left: 76px;
 }
 
 #leftside h3,
@@ -71,4 +75,18 @@
 #rightside a:hover {
     background-color: #999;
     color: #fff;
+}
+
+.center {
+    margin-top: 26px;
+}
+
+.end {
+    width: 1111px;
+    margin: -18px 1px 0px -1px;
+    height: 45px;
+    font-size: 12px;
+    line-height: 45px;
+    text-align: center;
+    background-color: #e8e7e3;
 }
