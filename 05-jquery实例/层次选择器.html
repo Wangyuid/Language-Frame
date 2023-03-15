@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.3.min.js"></script>
+</head>
+
+<body>
+    <p>这是div前面的p元素</p>
+    <div id="dv">
+        <p>这是div中的第1个p元素</p>
+        <ul>
+            <li>这是第1个li元素</li>
+            <li>
+                <p>这是第2个li中的p元素</p>
+            </li>
+        </ul>
+        <p>这是div中的第2个p元素</p>
+    </div>
+    <p>这是div后面的第1个p元素</p>
+    <p>这是div后面的第2个p元素</p>
+    <p>这是div后面的第3个p元素</p>
+    <div>4444</div>
+    <span>55555</span>
+    <script>
+        // $('#dv').children('p').css('backgroundColor', 'green')
+        // $('#dv p').css('backgroundColor', 'green')
+        // $('#dv').find('p').css('backgroundColor', 'green')//find()内如果不写不会选择任何后代
+        $('#dv+p').css('backgroundColor', 'green')
+        $('div').next('p').css('backgroundColor', 'green')
+    </script>
+</body>
+
+</html>
