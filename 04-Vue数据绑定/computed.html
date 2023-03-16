@@ -22,12 +22,21 @@
             data: {
                 firstName: '李',
                 lastName: '四',
+                fullName: '',
             },
             computed: {
                 fullName() {
-                    return this.firstName + this.lastName
+                    // return this.firstName + this.lastName
                 }
-            }
+            },
+            watch: {
+                firstName(newValue) {
+                    this.fullName = newValue + this.lastName
+                },
+                lastName(newValue) {
+                    this.fullName = newValue + this.firstName
+                },
+            },
         })
     </script>
 </body>
