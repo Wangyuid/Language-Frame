@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.3.min.js"></script>
+</head>
+
+<body>
+    <span>AAAAA</span>
+    <p>这是diV前面的p元素</p>
+    <p>这是diV前面的p元素</p>
+    <p>这是diV前面的p元素</p>
+    <div id="dv">
+        <p>这是diV中的第1个p元素</p>
+        <u1>
+            <1i>这是第1个1i元素</1i>
+            <1i>
+                <p>这是第2个1i中的p元素</p>
+            </1i>
+        </u1>
+        <p>这是diV中的第2个p元素</p>
+    </div>
+    <p>这是div后面的第1个p元素</p>
+    <span>CCC</span>
+    <div>BBB</div>
+    <script>
+        $('#dv').siblings('p').css('background', 'red')
+        // $('#dv').siblings().css('background', 'red')
+        // $('#dv').prevAl1('p').css('background', 'red')
+        // $('#dv').prevAl1().css('background', 'red')
+        // $('div').prev('p').css('background', 'red')
+        // $('div').prev().css('background', 'red')
+    </script>
+</body>
+
+</html>
