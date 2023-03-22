@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <ul>
+            <!-- 遍历数组 -->
+            <li v-for="(s,a) in students" :key="a">{{s.name}}-{{s.hobby}}</li>
+        </ul>
+    </div>
+    <script>
+        Vue.config.productionTip = false;
+        new Vue({
+            el: "#root",
+            data: {
+                students: [
+                    { id: '01', name: '坤', hobby: '篮球' },
+                    { id: '02', name: '坤坤', hobby: '唱歌' },
+                    { id: '03', name: '坤坤坤', hobby: '跳舞' },
+                ],
+            },
+        })
+    </script>
+</body>
+
+</html>

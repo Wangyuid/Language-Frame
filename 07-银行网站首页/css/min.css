@@ -5,14 +5,25 @@
 
 .bg-logo {
     background-color: #fdfcf8;
+    margin: 30px 10px;
+}
+
+.bg-input {
+    margin: 50px 147px;
 }
 
 .main-nav {
+    width: 1127px;
     background-color: #eee;
     list-style: none;
     padding: 15px 0;
     font-size: 18px;
     margin: 0;
+}
+
+button {
+    width: 54px;
+    height: 28px;
 }
 
 .main-nav li {
@@ -30,63 +41,46 @@
     text-decoration: none;
 }
 
-#leftside,
-#rightside {
-    font-size: 12px;
+#leftSide {
+    font-size: 16px;
     width: 178px;
-    border-left: 1px solid#ccc;
-    border-right: 1px solid #ccc;
-    padding-top: 15px;
+    border: 1px solid #ccc;
+    padding-top: 20px;
+    margin-top: 20px;
 }
 
-#rightside {
-    margin-left: 76px;
+#leftSide li {
+    list-style: none;
 }
 
-#leftside h3,
-#rightside h3 {
-    margin: 10px 0 5px 8px;
-}
-
-#leftside ul,
-#rightside ul {
-    list-style-type: none;
-}
-
-#leftside a {
+#leftSide a {
     color: #333;
     text-decoration: none;
     display: block;
     padding: 5px 0 5px 15px;
+    margin: 0px 10px;
 }
 
-#leftside a:hover {
+#leftSide a:hover {
     background-color: #999;
     color: #fff;
 }
 
-#rightside a {
-    color: #930;
-    display: block;
-    text-decoration: none;
-    padding: 5px 0 5px 15px;
-}
-
-#rightside a:hover {
-    background-color: #999;
-    color: #fff;
+h4{
+    margin-top: 15px;
 }
 
 .center {
-    margin-top: 26px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
 }
 
 .end {
-    width: 1111px;
-    margin: -18px 1px 0px -1px;
-    height: 45px;
-    font-size: 12px;
-    line-height: 45px;
+    width: 1127px;
+    margin: 20px 1px 0px -1px;
+    height: 55px;
+    font-size: 18px;
+    line-height: 55px;
     text-align: center;
     background-color: #e8e7e3;
 }

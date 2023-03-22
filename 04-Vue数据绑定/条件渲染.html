@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <!-- 1.v-show指令不显示的时候DOM节点并没有被删除，只是隐藏了，适用于切换率较高的一些场景
+        2.v-if指定会将不显示的DOM节点做删除处理，适用于切换频率较低的一些场景 -->
+        <!-- <h2 v-show="false">{{name}}</h2> -->
+        <h2>{{n}}</h2>
+        <button @click="n++">点我n+1</button>
+        <div v-show="n===1">一班</div>
+        <div v-show="n===2">二班</div>
+        <div v-show="n===3">三班</div>
+        <div v-show="n===4">四班</div>
+    </div>
+    <script>
+        Vue.config.productionTip = false;
+        new Vue({
+            el: "#root",
+            data: {
+                // name: '信息工程',
+                n: '0',
+            },
+        })
+    </script>
+</body>
+
+</html>
