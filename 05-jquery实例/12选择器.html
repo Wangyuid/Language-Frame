@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.3.min.js"></script>
+</head>
+
+<body>
+    <ul style="width:200px">
+        <li>春天摇身一变</li>
+        <li>成为了有秘密的人</li>
+        <li>枯萎是花瓣的秘密</li>
+        <li>凋零是叶子的秘密</li>
+    </ul>
+    <script>
+        // $('li').first().css('background', 'red')
+        // $('li').last().css('background', 'green')
+        // $('li').eq(2).css('background', 'yellow')
+        $('li').odd().css('border', '1px solid green')
+        $('li').even().css('background', 'red')
+    </script>
+</body>
+
+</html>
