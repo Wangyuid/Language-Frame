@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        {{getAdmin}}<input type="text" :placeholder="getTip">
+        <br>
+        <button v-on:click="show">切换类型</button>
+    </div>
+    <script>
+        Vue.config.productionTip = false;
+        new Vue({
+            el: "#root",
+            data: {
+                admin: true,
+                tip: true,
+            },
+            computed: {
+                getAdmin() {
+                    return this.admin ? '用户名登陆' : '邮箱登录'
+                },
+                getTip() {
+                    return this.tip ? '请输入用户名' : '请输入邮箱'
+                },
+            },
+            methods: {
+                show() {
+                    this.admin = !this.admin
+                    this.tip = !this.tip
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>

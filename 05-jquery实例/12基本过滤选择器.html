@@ -15,13 +15,20 @@
         <li>成为了有秘密的人</li>
         <li>枯萎是花瓣的秘密</li>
         <li>凋零是叶子的秘密</li>
+        <li>凋零是叶子的秘密</li>
+        <li>凋零是叶子的秘密</li>
+        <li>凋零是叶子的秘密</li>
+        <li>凋零是叶子的秘密</li>
     </ul>
     <script>
         // $('li').first().css('background', 'red')
         // $('li').last().css('background', 'green')
         // $('li').eq(2).css('background', 'yellow')
-        $('li').odd().css('border', '1px solid green')
-        $('li').even().css('background', 'red')
+        // $('li').odd().css('border', '1px solid green')
+        // $('li').even().css('background', 'red')
+        $('li').eq(4).css('background', 'red')
+        $('li:gt(4)').css('background', 'green')
+        $('li:lt(4)').css('color', 'red')
     </script>
 </body>
 

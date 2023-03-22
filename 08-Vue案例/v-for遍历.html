@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <ul>
+            <h2>姓名列表</h2>
+            <li v-for="a in people">{{a.name}}</li>
+        </ul>
+        <ul>
+            <h2>学生信息</h2>
+            <li v-for="a in students">
+                姓名：{{a.name}}<br>
+                年龄：{{a.age}}<br>
+                爱好：{{a.hobby}}
+            </li>
+        </ul>
+    </div>
+    <script>
+        Vue.config.productionTip = false;
+        new Vue({
+            el: "#root",
+            data: {
+                people: [
+                    { name: '张三' },
+                    { name: '李四' },
+                    { name: '王五' },
+                    { name: '孙六' },
+                ],
+                students: [
+                    { name: '小白', age: '20', hobby: '足球' },
+                    { name: '小黑', age: '18', hobby: '篮球' },
+                    { name: '小红', age: '19', hobby: '游泳' },
+                ],
+            },
+        })
+    </script>
+</body>
+
+</html>
