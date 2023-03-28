@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <ul>
+            <h2>姓名列表</h2>
+            <input type="text" placeholder="请输入搜索关键字" v-model="keyWord">
+            <li v-for="(s,index) in students" :key="s.index">{{s.name}}-{{s.hobby}}</li>
+        </ul>
+        <ul>
+    </div>
+    <script>
+        Vue.config.productionTip = false;
+        new Vue({
+            el: "#root",
+            data: {
+                keyWord: '',
+                students: [
+                    { id: '01', name: '小白', hobby: '足球' },
+                    { id: '02', name: '小黑', hobby: '篮球' },
+                    { id: '03', name: '大红', hobby: '游泳' },
+                    { id: '04', name: '大黄', hobby: '编程' },
+                ],
+                filStudents: [],
+            },
+            // watch: {
+            //     keyWord(val) {
+            //         this.filStudents = this.students.filter((s) => {
+            //             return s.name.indexOf(val) != -1
+            //         })
+            //     },
+            // },
+            watch: {
+                keyWord: {
+                    immediate: true,
+                    handler(val) {
+                        this.filStudents = this.students.filter((s) => {
+                            return s.name.indexOf(val) != -1
+                        })
+                    },
+                },
+            },
+        })
+    </script>
+</body>
+
+</html>

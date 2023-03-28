@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <ul>
+            <h2>姓名列表</h2>
+            <button @click.once="add">点击添加刘七同学</button>
+            <li v-for="(s,index) in students" :key="s.id">{{s.name}}-{{s.hobby}}<input type="text"></li>
+        </ul>
+        <ul>
+    </div>
+    <script>
+        Vue.config.productionTip = false;
+        new Vue({
+            el: "#root",
+            data: {
+                students: [
+                    { id: '01', name: '小白', hobby: '足球' },
+                    { id: '02', name: '小黑', hobby: '篮球' },
+                    { id: '03', name: '小红', hobby: '游泳' },
+                ],
+            },
+            methods: {
+                add() {
+                    const s = { id: '04', name: '刘七', hobby: '编程' }
+                    this.students.unshift(s)
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>
