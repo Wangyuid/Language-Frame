@@ -14,7 +14,7 @@
         <ul>
             <h2>姓名列表</h2>
             <input type="text" placeholder="请输入搜索关键字" v-model="keyWord">
-            <li v-for="(s,index) in students" :key="s.index">{{s.name}}-{{s.hobby}}</li>
+            <li v-for="(s,index) in filStudents" :key="index">{{s.name}}-{{s.hobby}}</li>
         </ul>
         <ul>
     </div>
