@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.3.min.js"></script>
+    <style>
+        div {
+            width: 200px;
+            height: 30px;
+            margin: 5px;
+            border: solid 1px black;
+        }
+    </style>
+</head>
+
+<body>
+    <div>我是div元素的文本</div>
+    <div>我也是div元素的文本</div>
+    <div><span>我是div内span元素的文本</span></div>
+    <div></div>
+    <script>
+        // $('div:contains(也)').css('background', 'red')
+        // $('div:has(span)').css('background', 'green')
+        // $('div').has('span').css('background', 'blue')
+        // $('div:empty').css('background', 'yellow')
+        // $('div:parent').css('background', 'yellow')
+        $('p:contains(di)').css('background', '#bbffaa')
+        $('div:empty').css('background', '#bbffaa')
+        $('p:has(.mini)').css('background', '#bbffaa')
+        $('p:parent').css('background', '#bbffaa')
+    </script>
+</body>
+
+</html>
