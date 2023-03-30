@@ -13,9 +13,18 @@
 </head>
 
 <body>
-    <span class="fa fa-bug" style="font-size: 1px;"></span>
-    <h6>Bootstrap教程</h6>
-    <span class="fa fa-bug" style="font-size: 1px;"></span>
+    <span class="fa fa-list" style="font-size: 1rem;"></span>
+    <h6 style="display: inline-block;">Bootstrap教程</h6>
+    <span class="fa fa-moon-o" style="font-size: 1rem;"></span>
+    <!-- <span class="fa fa-sun-o" style="font-size: 1px;"></span> -->
+    <script>
+        let span = document.querySelectorAll('span')
+        span[1].addEventListener('click', function () {
+            span[1].classList.toggle("fa-moon-o")
+            span[1].classList.toggle("fa-sun-o")
+            // span[1].classList.toggle("fa-sun-o", "fa-moon-o")
+        })
+    </script>
     <script src="./js/jquery-3.6.3.min.js"></script>
     <script src="./bootstrap/js/bootstrap.min.js"></script>
 </body>

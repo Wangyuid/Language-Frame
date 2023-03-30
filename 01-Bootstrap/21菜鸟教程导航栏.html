@@ -8,6 +8,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
     <style>
+        @import url("./bootstrap/font-awesome/css/font-awesome.min.css");
+
         * {
             margin: 0;
             padding: 0;
@@ -23,6 +25,27 @@
 
         .container-fluid a:hover {
             color: rgb(212, 228, 199);
+        }
+
+        #leftSide {
+            margin-top: 10px;
+            height: 600px;
+            border: 1px solid green;
+        }
+
+        /* .container .col-2 {
+            margin-top: 10px;
+            height: 600px;
+            border: 1px solid green;
+        } */
+
+        #leftSide ul li {
+            list-style: none;
+            padding: 7px;
+        }
+
+        .black {
+            background-color: #232627;
         }
     </style>
 </head>
@@ -101,6 +124,35 @@
             </div>
         </div>
     </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <div id="leftSide">
+                    <ul>
+                        <li>
+                            <span class="fa fa-list" style="color: green;"></span>
+                            <h6 style="display: inline-block;color: green;">Bootstrap教程</h6>
+                            <!-- <button class="btn"> -->
+                            <span class="fa fa-moon-o" style="color: green;"></span>
+                            <!-- </button> -->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-8"></div>
+            <div class="col-2"></div>
+        </div>
+    </div>
+    <script>
+        let body = document.querySelector('body');
+        let span = document.querySelectorAll('span')
+        span[1].addEventListener('click', function () {
+            span[1].classList.toggle("fa-moon-o")
+            span[1].classList.toggle("fa-sun-o")
+            body.classList.toggle("black")
+            // span[1].classList.toggle("fa-sun-o", "fa-moon-o")
+        })
+    </script>
     <script src="./js/jquery-3.6.3.min.js"></script>
     <script src="./bootstrap/js/bootstrap.min.js"></script>
 </body>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <ul>
+            <h2>filter过滤</h2>
+            <input type="text" placeholder="请输入搜索关键字" v-model="keyWord">
+            <li v-for="s in filStudents">{{s.fruit}}</li>
+        </ul>
+        <ul>
+    </div>
+    <script>
+        Vue.config.productionTip = false;
+        new Vue({
+            el: "#root",
+            data: {
+                keyWord: '',
+                students: [
+                    { id: '01', fruit: 'Tomato' },
+                    { id: '02', fruit: 'Pineapple' },
+                    { id: '03', fruit: 'Cookies' },
+                    { id: '04', fruit: 'Watermelon' },
+                    { id: '05', fruit: 'Peanut' },
+                    { id: '06', fruit: 'Pitted Date' },
+                    { id: '07', fruit: 'Bitter Orange' },
+                    { id: '08', fruit: 'Pepto Bismol' },
+                ],
+                filStudents: [],
+            },
+            watch: {
+                keyWord: {
+                    immediate: true,
+                    handler(val) {
+                        this.filStudents = this.students.filter((s) => {
+                            return s.fruit.toLowerCase().indexOf(val.toLowerCase()) != -1
+                        })
+                    },
+                },
+            },
+        })
+    </script>
+</body>
+
+</html>
