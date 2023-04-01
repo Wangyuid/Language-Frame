@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.3.min.js"></script>
+</head>
+
+<body>
+    <ul>
+        <li>北京</li>
+        <li>上海</li>
+        <li>上海</li>
+        <li>上海</li>
+        <li>上海</li>
+    </ul>
+    <ul>
+        <li>济南</li>
+        <li>烟台</li>
+    </ul>
+    <ul>
+        <li>天津</li>
+    </ul>
+    <ul>
+        <li>重庆</li>
+    </ul>
+    <script>
+        // $('li:first-child').css('background', 'red')
+        // $('li:last-child').css('background', 'red')
+        // $('li:only-child').css('background', 'red')
+        // $('li:nth-child(odd)').css('background', 'red')
+        // $('li:nth-child(3n)').css('background', 'red')
+        $('li:nth-child(3n+1)').css('background', 'red')
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script language="javascript" src="./jquery-3.6.3.min.js"></script>
+    <script language="javascript">
+        $(document).ready(function () {
+            $("[id]").css("background-color", "#B2E0FF");
+            //所有标签中含有id的加背景色
+            $("[id=choose]").css("background-color", "#B2E0FF");
+            //所有标签中id为choose的加背景色
+        });
+    </script>
+</head>
+
+<body>
+    <h1>欢迎光临我的网站主页</h1>
+    <p class="intro">网站管理员介绍</p>
+    <p>姓名：张三</p>
+    <p>性别：男</p>
+    <div id="choose">
+        兴趣爱好:
+        <ul>
+            <li>读书</li>
+            <li>听音乐</li>
+            <li>跑步</li>
+        </ul>
+    </div>
+</body>
+
+</html>

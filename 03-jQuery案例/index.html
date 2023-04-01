@@ -15,6 +15,13 @@
         $('#btn').click(function () {
             alert('hello')
         })
+        $(div[title]).css('backgroundColor','#bbffaa')
+        $(div[title=test]).css('backgroundColor','#bbffaa')
+        $(div[title!=test]).css('backgroundColor','#bbffaa')
+        $(div[title^=te]).css('backgroundColor','#bbffaa')
+        $(div[title$=est]).css('backgroundColor','#bbffaa')
+        $(div[title*=es]).css('backgroundColor','#bbffaa')
+        $(div[id][title*=es]).css('backgroundColor','#bbffaa')
     </script>
 </body>
 

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.3.min.js"></script>
+    <style>
+        div {
+            width: 200px;
+            margin: 5px;
+            border: solid 1px black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dv">class=dv</div>
+    <div title="标题">title=标题</div>
+    <div class="dv1" title="标题1">class=dv1 title=标题1</div>
+    <div class="dv1" title="标题2">class=dv1 title=标题2</div>
+    <script>
+        // $('div[class]').css('background', 'red')
+        // $('div[class=dv1]').css('background', 'red')
+        // $('div[class!=dv1]').css('background', 'red')
+        // $('div[title^=标]').css('background', 'red')
+        // $('div[title$=1]').css('background', 'red')
+        // $('div[class*=v]').css('background', 'red')
+        $('div[class][title*=2]').css('background', 'red')
+    </script>
+</body>
+
+</html>
