@@ -11,12 +11,17 @@
 
 <body>
     <div id="root">
+        <h2>姓名列表</h2>
+        <input type="text" placeholder="请输入搜索关键字" v-model="keyWord">
+        <button @click="sortType=2">分数升序</button>
+        <button @click="sortType=1">分数降序</button>
+        <button @click="sortType=0">原顺序</button>
         <ul>
-            <h2>姓名列表</h2>
-            <input type="text" placeholder="请输入搜索关键字" v-model="keyWord">
-            <li v-for="(s,index) in filStudents" :key="index">{{s.name}}-{{s.hobby}}</li>
+            <li v-for="(s,index) in filStudents" :key="s.id">
+                {{s.name}}-{{s.hobby}}-{{s.score}}
+                <!-- <input type="text"> -->
+            </li>
         </ul>
-        <ul>
     </div>
     <script>
         Vue.config.productionTip = false;
@@ -24,30 +29,37 @@
             el: "#root",
             data: {
                 keyWord: '',
+                sortType: 0,
                 students: [
-                    { id: '01', name: '小白', hobby: '足球' },
-                    { id: '02', name: '小黑', hobby: '篮球' },
-                    { id: '03', name: '大红', hobby: '游泳' },
-                    { id: '04', name: '大黄', hobby: '编程' },
+                    { id: '01', name: '小白', hobby: '足球', score: '80' },
+                    { id: '02', name: '小黑', hobby: '篮球', score: '95' },
+                    { id: '03', name: '大红', hobby: '游泳', score: '90' },
+                    { id: '04', name: '大黄', hobby: '编程', score: '70' },
                 ],
-                filStudents: [],
+                // filStudents: [],
             },
             // watch: {
-            //     keyWord(val) {
-            //         this.filStudents = this.students.filter((s) => {
-            //             return s.name.indexOf(val) != -1
-            //         })
+            //     keyWord: {
+            //         immediate: true,
+            //         handler(val) {
+            //             this.filStudents = this.students.filter((s) => {
+            //                 return s.name.indexOf(val) != -1
+            //             })
+            //         },
             //     },
             // },
-            watch: {
-                keyWord: {
-                    immediate: true,
-                    handler(val) {
-                        this.filStudents = this.students.filter((s) => {
-                            return s.name.indexOf(val) != -1
+            computed: {
+                filStudents() {
+                    const arr = this.students.filter((s) => {
+                        return s.name.indexOf(this.keyWord) !== -1;
+                    });
+                    if (this.sortType !== 0) {
+                        arr.sort((s1, s2) => {
+                            return this.sortType === 1 ? s2.score - s1.score : s1.score - s2.score
                         })
-                    },
-                },
+                    }
+                    return arr
+                }
             },
         })
     </script>
