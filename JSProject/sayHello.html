@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>根据时间判断显示不同的问好</title>
+</head>
+
+<body>
+    <h2></h2>
+    <h2></h2>
+    <h2></h2>
+    <script>
+        let h2 = document.querySelectorAll('h2')
+        let date = new Date()
+        h2[0].innerHTML = `今天日期：${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`
+        h2[1].innerHTML = `现在时间：${date.getHours()}点${date.getMinutes()}分`
+        if (date.getHours() < 12) {
+            h2[2].innerHTML = `早上好!欢迎来到青软`
+        } else if (date.getHours() < 18) {
+            h2[2].innerHTML = `中午好!欢迎来到青软`
+        } else {
+            h2[2].innerHTML = `晚上好!欢迎来到青软`
+        }
+    </script>
+</body>
+
+</html>

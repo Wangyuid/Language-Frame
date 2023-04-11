@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.3.min.js"></script>
+</head>
+<bu>
+    <form id="myForm">
+        昵称：<input type="text" value="text"><br>
+        密码：<input type="password" value="password"><br>
+        性别：<input type="radio" name="1"><span>男</span>
+        <input type="radio" name="1"><span>女</span><br>
+        爱好：<input type="checkbox"><span>游泳</span>
+        <input type="checkbox"><span>旅行</span><br>
+        照片1:<img src="../08-w3school/img/icon1.png" width="100"><br>
+        照片2:<input type="image" src="../08-w3school/img/icon2.png" width="150"><br>
+        说明：<textarea></textarea><br>
+        <input type="reset" value="重置"><button>清空</button>
+        <input type="button" value="保存">
+        <input type="submit" value="提交">
+        <select name="" id="" multiple="multiple">
+            <!-- select实现多选的方法：1.加"multiple="multiple" 2.前台按住ctrl -->
+            <option value="">aaa</option>
+            <option value="">bbb</option>
+            <option value="">ccc</option>
+        </select>
+    </form>
+    <script>
+        $('[value=保存]').click(function () {
+            alert($(':text').val())
+            $(':text').val('')
+        })
+    </script>
+    </body>
+
+</html>
