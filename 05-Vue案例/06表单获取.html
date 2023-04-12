@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <form action="" @submit.prevent="shi">
+            账号:<input type="text" name="" value="" v-model="userInfo.account"><br><br>
+            密码:<input type="password" name="" value="" v-model="userInfo.password"><br><br>
+            年龄:<input type="number" name="" value="" v-model.name="userInfo.age"><br><br>
+            性别: 男<input type="radio" name="sex" v-model="userInfo.sex" value="male">
+            女<input type="radio" name="sex" v-model="userInfo.sex" value="female"><br><br>
+            爱好:读书<input type="checkbox" v-model="userInfo.hobby" value="read">
+            学习<input type="checkbox" v-model="userInfo.hobby" value="study">
+            编程<input type="checkbox" v-model="userInfo.hobby" value="programming"><br><br>
+            所在班级:<select v-model="userInfo.classRoom">
+                <option value="请选择所在班级">请选择所在班级</option>
+                <option value="one">一班</option>
+                <option value="two">二班</option>
+                <option value="three">三班</option>
+                <option value="four">四班</option>
+            </select><br><br>
+            其他信息:<textarea rows="" cols="" v-model="userInfo.other"></textarea><br><br>
+            <input type="checkbox" v-model="userInfo.agree">阅读并接受<a href="#">《用户协议》</a><input type="submit">
+        </form>
+    </div>
+    <script>
+        Vue.config.productionTip = false;
+        new Vue({
+            el: "#root",
+            data: {
+                userInfo: {
+                    account: '',
+                    password: '',
+                    age: '',
+                    sex: 'male',
+                    hobby: [],
+                    classRoom: '请选择所在班级',
+                    other: '',
+                    agree: '',
+                },
+            },
+            methods: {
+                shi() {
+                    console.log(JSON.stringify(this.userInfo))
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>

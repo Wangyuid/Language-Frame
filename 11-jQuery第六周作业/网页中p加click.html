@@ -13,11 +13,15 @@
     <p>段落一</p>
     <p>段落二</p>
     <script>
-            $('p').click(function () {
-                alert($('p')[0].innerText)
-                alert($('p')[1].innerText)
+        // $('p').click(function () {
+        //     alert($('p')[0].innerHTML)
+        //     alert($('p')[1].innerHTML)
+        // })
+        $('p').each(function () {
+            $(this).click(function () {
+                alert($(this).html())
             })
-
+        })
     </script>
 </body>
 
