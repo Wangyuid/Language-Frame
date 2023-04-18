@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <h2 :style="{opacity}">信息工程学院欢迎你</h2>
+    </div>
+    <script>
+        Vue.config.productionTip = false;
+        const vm = new Vue({
+            el: "#root",
+            data: {
+                opacity: 1,
+            },
+            //生命周期函数，this指向vue的实例对象
+            mounted() {
+                setInterval(() => {
+                    this.opacity -= 0.01
+                    if (this.opacity <= 0) this.opacity = 1
+                }, 16)
+            },
+        })
+        //使用外部定时器
+        // setInterval(() => {
+        //     vm.opacity -= 0.01
+        //     if (vm.opacity <= 0) vm.opacity = 1
+        // }, 16)
+    </script>
+</body>
+
+</html>
