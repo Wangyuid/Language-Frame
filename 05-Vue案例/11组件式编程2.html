@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <app></app>
+    </div>
+</body>
+<script>
+    Vue.config.productionTip = false
+
+    const score = Vue.extend({
+        template: `
+        <div>
+            <h4>分数{{hello}}</h4>
+        </div>
+        `,
+        data() {
+            return {
+                hello: '75',
+
+            };
+        }
+    });
+
+    //第一步创建student组件
+    const student = Vue.extend({
+        name: 'student',
+        template: `
+        <div>
+        <h4>学生:{{studentName}}</h4>
+        <h4>学校:{{age}}</h4>
+        <score></score>
+    </div>
+        `,
+        data() {
+            return {
+                studentName: '张三',
+                age: 18,
+            };
+        }, components: {
+            score
+        }
+    });
+
+
+    const hello = Vue.extend({
+
+        template: `
+        <div>
+            <h4>{{hello}}</h4>
+        </div>
+        `,
+        data() {
+            return {
+                hello: '你好',
+
+            };
+        }
+    });
+
+
+
+    //第一步创建school组件
+    const school = Vue.extend({
+        name: 'school',
+        template: `
+        <div>
+        <h4>学校:{{schoolName}}</h4>
+        <h4>地址:{{address}}</h4>
+        <student></student>
+        
+    </div>
+        `,
+        data() {
+            return {
+                schoolName: '山东商务',
+                address: '烟台',
+            };
+        },
+        components: {
+            student,
+
+        }
+    });
+
+
+    const app = Vue.extend({
+        template: `
+        <div>
+            <hello></hello>
+            <school></school>
+        <hr>
+    </div>
+        `,
+        components: {
+            school,
+            hello
+        }
+    });
+
+    new Vue({
+        el: '#root',
+        components: {
+            app
+        }
+    });
+</script>
+
+</html>

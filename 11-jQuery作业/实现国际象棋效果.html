@@ -13,36 +13,38 @@
             padding: 0;
         }
 
-        #all {
+        table {
             width: 300px;
+            height: 300px;
             margin: 20px auto;
         }
 
-        .block {
-            display: inline-block;
-            width: 50px;
-            height: 50px;
+        td {
             border: 1px solid black;
         }
     </style>
 </head>
 
 <body>
-    <div id="all">
-        <div class="block a"></div>
-        <div class="block"></div>
-        <div class="block a"></div>
-        <br>
-        <div class="block"></div>
-        <div class="block a"></div>
-        <div class="block"></div>
-        <br>
-        <div class="block a"></div>
-        <div class="block"></div>
-        <div class="block a"></div>
-    </div>
+    <table cellspacing="0">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
     <script>
-        $('.a').css('background', 'black')
+        $('td').even().css('background', 'black')
     </script>
 </body>
 

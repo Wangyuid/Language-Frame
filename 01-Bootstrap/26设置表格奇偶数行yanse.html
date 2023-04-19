@@ -30,24 +30,24 @@
             <div class="col">
                 <table class="table">
                     <thead class="text-center">
-                        <tr class="table-warning">
+                        <tr class="table-warning odd">
                             <th>图书名称</th>
                             <th>作者</th>
                             <th>出版社</th>
                         </tr>
                     </thead>
                     <tbody class="text-left">
-                        <tr class="table-primary">
+                        <tr class="table-primary even">
                             <td>html+css应用实践课程</td>
                             <td>汪明云，罗斌，罗帅</td>
                             <td>清华大学出版社</td>
                         </tr>
-                        <tr class="table-info">
+                        <tr class="table-info odd">
                             <td>程序员的三门课</td>
                             <td>于君泽，李伟山</td>
                             <td>电子工业出版社</td>
                         </tr>
-                        <tr class="table-danger">
+                        <tr class="table-danger even">
                             <td>c++ builder精彩编程实例</td>
                             <td>罗斌</td>
                             <td>中国水利水电出版社</td>
@@ -57,6 +57,21 @@
             </div>
         </div>
     </div>
+    <script>
+        let btn = document.querySelectorAll('.btn')
+        let odd = document.querySelectorAll('.odd')
+        let even = document.querySelectorAll('.even')
+        btn[0].addEventListener('click', function () {
+            even[0].classList.add("table-danger")
+            even[1].classList.add("table-danger")
+        })
+        btn[1].addEventListener('click', function () {
+            odd[0].classList.remove('table-warning')
+            odd[1].classList.remove('table-info')
+            odd[0].classList.add('table-secondary')
+            odd[1].classList.add('table-secondary')
+        })
+    </script>
     <script src="./js/jquery-3.6.3.min.js"></script>
     <script src="./bootstrap/js/bootstrap.min.js"></script>
 </body>
