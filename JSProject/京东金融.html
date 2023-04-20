@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.3.min.js"></script>
+    <style>
+        nav {
+            width: 100%;
+        }
+
+        nav p,
+        nav ul {
+            display: inline-block;
+        }
+
+        nav ul {
+            padding: 0;
+        }
+
+        nav li {
+            list-style: none;
+        }
+
+        .shop {
+            margin-left: 300px;
+        }
+
+        nav p {
+            margin: 10px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <nav>
+            <p>欢迎光临京东，请<a href="#">登录</a>免费注册</p>
+            <p class="shop">购物车</p>
+            <p>我的交易单</p>
+            <p>会员中心</p>
+            <p>我的关注</p>
+            <ul>
+                <li class="a">联系客服</li>
+                <li>帮助中心</li>
+                <li>我要吐槽</li>
+                <li>在线客服</li>
+                <li>咨询Jack</li>
+                <li>客服邮箱</li>
+            </ul>
+            <p>手机金融</p>
+            <p>网站导航</p>
+        </nav>
+        <div>
+            <img src="./img/京东金融.png" alt="">
+        </div>
+        <div>
+            <div class="left">
+                <ul>
+                    <li>常见问题分类</li>
+                </ul>
+                <ul>
+                    <li>京东金融</li>
+                    <li>京东金融简介</li>
+                    <li>京东金融会员</li>
+                    <li>京东会员安全中心</li>
+                </ul>
+                <ul>
+                    <li>理财</li>
+                </ul>
+                <ul>
+                    <li>白条</li>
+                </ul>
+                <ul>
+                    <li>众筹</li>
+                </ul>
+                <ul>
+                    <li>
+                        京东钱包
+                    </li>
+                </ul>
+            </div>
+            <div class="right">
+                <span>京东金融>京东金融会员</span>
+                <ul>
+                    <li>什么是京东金融会员</li>
+                    <li>会员签到规则</li>
+                    <li>会员金币</li>
+                    <li>小白信用</li>
+                    <li>外部虚拟券</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('nav li').not('.a').hide()
+    </script>
+</body>
+
+</html>
