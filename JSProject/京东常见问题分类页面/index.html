@@ -1,15 +1,18 @@
 <!doctype html>
 <html lang="en">
- <head>
-  <meta charset="UTF-8">
-  <meta name="Generator" content="EditPlus®">
-  <meta name="Author" content="">
-  <meta name="Keywords" content="">
-  <meta name="Description" content="">
-  <title>京东常见问题分类页面</title>
-  <link href="css/style.css" rel="stylesheet"/>
- </head>
- <body>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="Generator" content="EditPlus®">
+	<meta name="Author" content="">
+	<meta name="Keywords" content="">
+	<meta name="Description" content="">
+	<title>京东常见问题分类页面</title>
+	<link href="css/style.css" rel="stylesheet" />
+	<script src="./js/jquery-1.8.3.min.js"></script>
+</head>
+
+<body>
 	<div class="top">
 		<div class="wrap">
 			<div class="top-l left">欢迎光临京东，请<a href="" class="top-login">登录</a><a href="">免费注册</a></div>
@@ -42,52 +45,62 @@
 		</div>
 	</div>
 	<div class="wrap">
-		<a href=""><img src="images/logo.png" alt="logo"/></a>
+		<a href=""><img src="images/logo.png" alt="logo" /></a>
 	</div>
 	<div class="wrap">
 		<nav class="nav">
 			<header>常见问题分类</header>
 			<ul>
-				<li><dl>
-					<dt>京东金融</dt>
-					<dd><a href="#">京东金融简介</a></dd>
-					<dd><a href="#">京东金融会员</a></dd>
-					<dd><a href="#">京东金融安全中心</a></dd>
-				</dl></li>
-				<li><dl>
-					<dt>理财</dt>
-					<dd><a href="#">京东小金库</a></dd>
-					<dd><a href="#">京东基金理财</a></dd>
-					<dd><a href="#">京东保险理财</a></dd>
-					<dd><a href="#">小白理财</a></dd>
-					<dd><a href="#">智投理财</a></dd>
-					<dd><a href="#">乐猜</a></dd>
-				</dl></li>
-				<li><dl>
-					<dt>白条</dt>
-					<dd><a href="#">京东白条</a></dd>
-					<dd><a href="#">京东金条</a></dd>
-					<dd><a href="#">校园白条</a></dd>
-					<dd><a href="#">教育白条</a></dd>
-					<dd><a href="#">乡村白条</a></dd>
-					<dd><a href="#">京东金采</a></dd>
-					<dd><a href="#">京农贷</a></dd>
-				</dl></li>
-				<li><dl>
-					<dt>众筹</dt>
-					<dd><a href="#">产品众筹</a></dd>
-					<dd><a href="#">轻众筹</a></dd>
-					<dd><a href="#">产品众筹发起者常见问题</a></dd>
-					<dd><a href="#">产品众筹支持者常见问题</a></dd>
-					<dd><a href="#">产品众筹永久众筹常见问题</a></dd>
-					<dd><a href="#">京东众创常见问题</a></dd>
-				</dl></li>
-				<li><dl>
-					<dt>京东钱包</dt>
-					<dd><a href="#">京东钱包简介</a></dd>
-					<dd><a href="#">自动服务及常见问题</a></dd>
-					<dd><a href="#">购房盈</a></dd>
-				</dl></li>
+				<li>
+					<dl>
+						<dt>京东金融</dt>
+						<dd><a href="#">京东金融简介</a></dd>
+						<dd><a href="#">京东金融会员</a></dd>
+						<dd><a href="#">京东金融安全中心</a></dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt>理财</dt>
+						<dd><a href="#">京东小金库</a></dd>
+						<dd><a href="#">京东基金理财</a></dd>
+						<dd><a href="#">京东保险理财</a></dd>
+						<dd><a href="#">小白理财</a></dd>
+						<dd><a href="#">智投理财</a></dd>
+						<dd><a href="#">乐猜</a></dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt>白条</dt>
+						<dd><a href="#">京东白条</a></dd>
+						<dd><a href="#">京东金条</a></dd>
+						<dd><a href="#">校园白条</a></dd>
+						<dd><a href="#">教育白条</a></dd>
+						<dd><a href="#">乡村白条</a></dd>
+						<dd><a href="#">京东金采</a></dd>
+						<dd><a href="#">京农贷</a></dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt>众筹</dt>
+						<dd><a href="#">产品众筹</a></dd>
+						<dd><a href="#">轻众筹</a></dd>
+						<dd><a href="#">产品众筹发起者常见问题</a></dd>
+						<dd><a href="#">产品众筹支持者常见问题</a></dd>
+						<dd><a href="#">产品众筹永久众筹常见问题</a></dd>
+						<dd><a href="#">京东众创常见问题</a></dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt>京东钱包</dt>
+						<dd><a href="#">京东钱包简介</a></dd>
+						<dd><a href="#">自动服务及常见问题</a></dd>
+						<dd><a href="#">购房盈</a></dd>
+					</dl>
+				</li>
 			</ul>
 		</nav>
 		<section class="content">
@@ -101,5 +114,23 @@
 			</ul>
 		</section>
 	</div>
- </body>
+	<script>
+		$(document).ready(function () {
+			$('.menu-btn:eq(0)').mouseover(function () {
+				$('.top-m ul.topDown').slideDown("slow")
+			})
+			$('.menu-btn:eq(0)').mouseleave(function () {
+				$('.top-m ul.topDown').slideUp("fast")
+			})
+			$('nav ul li dl dt:eq(0)').click(function () {
+				if ($('nav ul li dl dt:eq(0)~dd').is(':hidden')) {
+					$('nav ul li dl dt:eq(0)~dd').slideDown("slow")
+				} else {
+					$('nav ul li dl dt:eq(0)~dd').slideUp("slow")
+				}
+			})
+		})
+	</script>
+</body>
+
 </html>

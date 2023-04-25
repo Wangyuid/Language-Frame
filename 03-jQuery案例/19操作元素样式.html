@@ -23,11 +23,30 @@
 
 <body>
     <p>aaaa</p>
+    <p>bbbb</p>
+    <p>cccc</p>
     <button>单击</button>
     <script>
         $('button').click(function () {
-            var x = $('p').css(['width', 'height', 'backgroundColor'])
-            console.log(x)
+            $('p').css({
+                'height': function (x, y) {
+                    if (x == 0) {
+                        return 200 + 'px'
+                    }
+                },
+                'background': function (x, y) {
+                    if (x == 1) {
+                        return 'green'
+                    }
+                },
+                'width': function (x, y) {
+                    if (x == 2) {
+                        return (parseInt(y) + 50) + 'px'
+                    }
+                },
+            })
+            // var x = $('p').css(['width', 'height', 'backgroundColor'])
+            // console.log(x)
         })
     </script>
 </body>
