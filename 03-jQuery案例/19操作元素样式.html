@@ -18,6 +18,14 @@
             height: 100px;
             background-color: red;
         }
+
+        .x {
+            background-color: pink;
+        }
+
+        .y {
+            font-size: 50px;
+        }
     </style>
 </head>
 
@@ -27,27 +35,36 @@
     <p>cccc</p>
     <button>单击</button>
     <script>
+        // 单击次数为三的倍数时触发
+        // var n = 0
+        // $('button').click(function () {
+        //     $('p').toggleClass('x', ++n % 3 === 0)
+        // })
         $('button').click(function () {
             $('p').css({
-                'height': function (x, y) {
+                height: function (x, y) {
                     if (x == 0) {
                         return 200 + 'px'
                     }
                 },
-                'background': function (x, y) {
+                background: function (x, y) {
                     if (x == 1) {
                         return 'green'
                     }
                 },
-                'width': function (x, y) {
+                width: function (x, y) {
                     if (x == 2) {
                         return (parseInt(y) + 50) + 'px'
                     }
                 },
             })
-            // var x = $('p').css(['width', 'height', 'backgroundColor'])
-            // console.log(x)
         })
+        // var x = $('p').css(['width', 'height', 'backgroundColor'])
+        // console.log(x)
+        //不常用
+        // $('button').click(function () {
+        //     $('p').toggleClass('x y')
+        // })
     </script>
 </body>
 

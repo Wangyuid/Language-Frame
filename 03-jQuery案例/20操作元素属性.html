@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.3.min.js"></script>
+</head>
+
+<body>
+    <!-- <input type="text" value="111"> -->
+    <input type="checkbox" checked>
+    <input type="checkbox" checked="checked">
+    <input type="checkbox" checked="true">
+    <input type="checkbox">
+    <button>单击</button>
+    <script>
+        // $('button').click(function () {
+        //     var a = $('input').attr('value')
+        //     var b = $('input').val()
+        //     alert(a + b)
+        // })
+        // $('button').click(function () {
+        //     var a = $('input').attr('type', 'checkbox')
+        // })
+        $('button').click(function () {
+            $('input:last').prop('checked', true)
+        })
+    </script>
+</body>
+
+</html>
