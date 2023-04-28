@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.3.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 200px;
+            height: 100px;
+            background: #27d1ff;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" class="txt">
+    <input type="button" value="按钮" class="btn">
+    <div></div>
+    <script>
+        $('.btn').click(function () {
+            var i = $('.txt').val()
+            $('div').append(i)
+            $('.txt').val("")
+        })
+    </script>
+</body>
+
+</html>

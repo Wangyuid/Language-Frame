@@ -1,28 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="./jquery-3.6.3.min.js"></script>
+    <title>5*5黑白棋盘</title>
+    <style>
+        #board {
+            width: 240px;
+            height: 240px;
+        }
+
+        .cell {
+            width: 46px;
+            height: 46px;
+            float: left;
+        }
+
+        .black {
+            background-color: black;
+        }
+
+        .white {
+            background-color: white;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // 创建 5x5 棋盘
+            for (var i = 0; i < 5; i++) {
+                for (var j = 0; j < 5; j++) {
+                    // 创建一个 div 元素作为棋盘的格子
+                    var cell = $("<div></div>");
+                    cell.addClass("cell");
+
+                    // 根据位置为格子添加黑色或白色背景
+                    if ((i + j) % 2 == 0) {
+                        cell.addClass("black");
+                    } else {
+                        cell.addClass("white");
+                    }
+
+                    // 将格子添加到棋盘中
+                    $("#bo").append(cell);
+                }
+            }
+        });
+
+    </script>
 </head>
 
 <body>
-    <button id="btn">点我</button>
-    <script>
-        $('#btn').click(function () {
-            alert('hello')
-        })
-        $(div[title]).css('backgroundColor','#bbffaa')
-        $(div[title=test]).css('backgroundColor','#bbffaa')
-        $(div[title!=test]).css('backgroundColor','#bbffaa')
-        $(div[title^=te]).css('backgroundColor','#bbffaa')
-        $(div[title$=est]).css('backgroundColor','#bbffaa')
-        $(div[title*=es]).css('backgroundColor','#bbffaa')
-        $(div[id][title*=es]).css('backgroundColor','#bbffaa')
-    </script>
+    <div id="board"></div>
 </body>
 
 </html>
