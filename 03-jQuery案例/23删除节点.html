@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.3.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <p>aaaa</p>
+    </div>
+    <button>删除元素</button>
+    <button>恢复元素</button>
+    <script>
+        $('button:first').click(function () {
+            $('p').remove()
+        })
+        $('button:last').click(function () {
+            $('p')
+        })
+    </script>
+</body>
+
+</html>

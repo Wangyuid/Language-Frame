@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <style type="text/css">
+        .box {
+
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 1、display属性——元素容器的类型 -->
+    <div class="container">
+        <h4 class="my-3">使用d-flex定义弹性盒子</h4>
+        <div class="d-flex p-3 bg-secondary text-white">
+            <div class="p-2 bg-info">Flex item 1</div>
+            <div class="p-2 bg-warning">Flex item 2</div>
+            <div class="p-2 bg-primary">Flex item 3</div>
+        </div>
+        <h4 class="my-3">使用d-inline-flex定义弹性盒子</h4>
+        <div class="d-inline-flex p-3 bg-secondary text-white">
+            <div class="p-2 bg-info">Flex item 1</div>
+            <div class="p-2 bg-warning">Flex item 2</div>
+            <div class="p-2 bg-primary">Flex item 3</div>
+        </div>
+    </div>
+    <!-- 2、flex-flow属性——排列方向 -->
+    <div class="container">
+        <h4 class="my-3">使用flex-row从左侧开始</h4>
+        <div class="d-flex flex-row bg-secondary ">
+            <div class="p-2 bg-info">Flex item 1</div>
+            <div class="p-2 bg-warning">Flex item 2</div>
+            <div class="p-2 bg-primary">Flex item 3</div>
+        </div>
+        <h4 class="my-3">使用flex-row-reverse从右侧开始</h4>
+        <div class="d-flex flex-row-reverse bg-secondary">
+            <div class="p-2 bg-info">Flex item 1</div>
+            <div class="p-2 bg-warning">Flex item 2</div>
+            <div class="p-2 bg-primary">Flex item 3</div>
+        </div>
+    </div>
+    <div class="container">
+        <h4 class="my-3">使用flex-column从左侧开始</h4>
+        <div class="d-flex flex-column bg-secondary ">
+            <div class="p-2 bg-info">Flex item 1</div>
+            <div class="p-2 bg-warning">Flex item 2</div>
+            <div class="p-2 bg-primary">Flex item 3</div>
+        </div>
+        <h4 class="my-3">使用flex-column-reverse从右侧开始</h4>
+        <div class="d-flex flex-column-reverse bg-secondary">
+            <div class="p-2 bg-info">Flex item 1</div>
+            <div class="p-2 bg-warning">Flex item 2</div>
+            <div class="p-2 bg-primary">Flex item 3</div>
+        </div>
+    </div>
+    <!-- 3、flex-wrap属性——包裹 -->
+    <div class="container">
+        <h4 class="my-3">使用flex-nowrap</h4>
+        <div class="row">
+            <div class="col-4">
+                <div class="d-flex flex-nowrap bg-secondary ">
+
+                    <div class="mb-auto p-2 bg-info">Flex item 1</div>
+                    <div class="p-2 bg-warning">Flex item 2</div>
+                    <div class="p-2 bg-primary">Flex item 3</div>
+                    <div class="mb-auto p-2 bg-info">Flex item 4</div>
+                    <div class="p-2 bg-warning">Flex item 5</div>
+                    <div class="p-2 bg-primary">Flex item 6</div>
+                </div>
+            </div>
+        </div>
+        <h4 class="my-3">使用flex-wrap</h4>
+        <div class="row">
+            <div class="col-3">
+                <div class="d-flex flex-wrap bg-secondary ">
+
+                    <div class="mb-auto p-2 bg-info">Flex item 1</div>
+                    <div class="p-2 bg-warning">Flex item 2</div>
+                    <div class="p-2 bg-primary">Flex item 3</div>
+                    <div class="mb-auto p-2 bg-info">Flex item 4</div>
+                    <div class="p-2 bg-warning">Flex item 5</div>
+                    <div class="p-2 bg-primary">Flex item 6</div>
+                </div>
+            </div>
+        </div>
+        <h4 class="my-3">使用flex-wrap-reverse</h4>
+        <div class="row">
+            <div class="col-3">
+                <div class="d-flex flex-wrap-reverse bg-secondary ">
+
+                    <div class="mb-auto p-2 bg-info">Flex item 1</div>
+                    <div class="p-2 bg-warning">Flex item 2</div>
+                    <div class="p-2 bg-primary">Flex item 3</div>
+                    <div class="mb-auto p-2 bg-info">Flex item 4</div>
+                    <div class="p-2 bg-warning">Flex item 5</div>
+                    <div class="p-2 bg-primary">Flex item 6</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 4、justify-content属性——内容排列 -->
+    <div class="container">
+        <h4 class="my-3">使用justify-content-start</h4>
+        <div class="d-flex justify-content-start bg-secondary ">
+            <div class="p-2 bg-info">Flex item 1</div>
+            <div class="p-2 bg-warning">Flex item 2</div>
+            <div class="p-2 bg-primary">Flex item 3</div>
+        </div>
+        <h4 class="my-3">使用justify-content-end</h4>
+        <div class="d-flex justify-content-end bg-secondary">
+            <div class="p-2 bg-info">Flex item 1</div>
+            <div class="p-2 bg-warning">Flex item 2</div>
+            <div class="p-2 bg-primary">Flex item 3</div>
+        </div>
+        <h4 class="my-3">使用justify-content-center</h4>
+        <div class="d-flex justify-content-center bg-secondary">
+            <div class="p-2 bg-info">Flex item 1</div>
+            <div class="p-2 bg-warning">Flex item 2</div>
+            <div class="p-2 bg-primary">Flex item 3</div>
+        </div>
+        <h4 class="my-3">使用justify-content-between</h4>
+        <div class="d-flex justify-content-between bg-secondary">
+            <div class="p-2 bg-info">Flex item 1</div>
+            <div class="p-2 bg-warning">Flex item 2</div>
+            <div class="p-2 bg-primary">Flex item 3</div>
+        </div>
+        <h4 class="my-3">使用justify-content-around</h4>
+        <div class="d-flex justify-content-around bg-secondary">
+            <div class="p-2 bg-info">Flex item 1</div>
+            <div class="p-2 bg-warning">Flex item 2</div>
+            <div class="p-2 bg-primary">Flex item 3</div>
+        </div>
+    </div>
+    <!-- 5、align-items属性——项目对齐 -->
+    <div class="container">
+        <h4 class="my-3">使用align-items-start</h4>
+        <div class="d-flex align-items-start bg-secondary box">
+            <div class="p-2 bg-info">Flex item 1</div>
+            <div class="p-2 bg-warning">Flex item 2</div>
+            <div class="p-2 bg-primary">Flex item 3</div>
+        </div>
+        <h4 class="my-3">使用align-items-end</h4>
+        <div class="d-flex align-items-end bg-secondary box">
+            <div class="p-2 bg-info">Flex item 1</div>
+            <div class="p-2 bg-warning">Flex item 2</div>
+            <div class="p-2 bg-primary">Flex item 3</div>
+        </div>
+        <h4 class="my-3">使用align-items-center</h4>
+        <div class="d-flex align-items-center bg-secondary box">
+            <div class="p-2 bg-info">Flex item 1</div>
+            <div class="p-2 bg-warning">Flex item 2</div>
+            <div class="p-2 bg-primary">Flex item 3</div>
+        </div>
+        <h4 class="my-3">使用align-items-baseline</h4>
+        <div class="d-flex align-items-baseline bg-secondary box">
+            <div class="p-2 bg-info">Flex item 1</div>
+            <div class="p-2 bg-warning">Flex item 2</div>
+            <div class="p-2 bg-primary">Flex item 3</div>
+        </div>
+        <h4 class="my-3">使用align-items-stretch</h4>
+        <div class="d-flex algin-items-strech bg-secondary box">
+            <div class="p-2 bg-info">Flex item 1</div>
+            <div class="p-2 bg-warning">Flex item 2</div>
+            <div class="p-2 bg-primary">Flex item 3</div>
+        </div>
+    </div>
+    <!-- 6、align-self属性——自身对齐 -->
+    <div class="container">
+        <h4 class="my-3">使用align-self-start</h4>
+        <div class="d-flex bg-secondary box">
+            <div class="p-2 bg-info">Flex item 1</div>
+            <div class="p-2 bg-warning align-self-start">Flex item 2</div>
+            <div class="p-2 bg-primary">Flex item 3</div>
+        </div>
+        <h4 class="my-3">使用align-self-end</h4>
+        <div class="d-flex bg-secondary box">
+            <div class="p-2 bg-info">Flex item 1</div>
+            <div class="p-2 bg-warning align-self-end">Flex item 2</div>
+            <div class="p-2 bg-primary">Flex item 3</div>
+        </div>
+        <h4 class="my-3">使用align-self-center</h4>
+        <div class="d-flex bg-secondary box">
+            <div class="p-2 bg-info">Flex item 1</div>
+            <div class="p-2 bg-warning align-self-center">Flex item 2</div>
+            <div class="p-2 bg-primary">Flex item 3</div>
+        </div>
+        <h4 class="my-3">使用align-self-baseline</h4>
+        <div class="d-flex bg-secondary box">
+            <div class="p-2 bg-info">Flex item 1</div>
+            <div class="p-2 bg-warning align-self-baseline">Flex item 2</div>
+            <div class="p-2 bg-primary">Flex item 3</div>
+        </div>
+        <h4 class="my-3">使用align-self-stretch</h4>
+        <div class="d-flex bg-secondary box">
+            <div class="p-2 bg-info">Flex item 1</div>
+            <div class="p-2 bg-warning align-self-strech">Flex item 2</div>
+            <div class="p-2 bg-primary">Flex item 3</div>
+        </div>
+    </div>
+    <script src="./js/jquery-3.6.3.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
