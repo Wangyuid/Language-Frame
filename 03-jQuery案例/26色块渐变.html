@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.3.min.js"></script>
+    <style>
+        ul li {
+            float: left;
+            list-style: none;
+            width: 60px;
+            height: 100px;
+            background-color: green;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+    </ul>
+    <script>
+        // $('li:eq(0)').css('opacity', 0.3);
+        // $('li:eq(1)').css('opacity', 0.4);
+        // $('li:eq(2)').css('opacity', 0.5);
+        // $('li:eq(3)').css('opacity', 0.6);
+        // $('li:eq(4)').css('opacity', 0.7);
+        // $('li:eq(5)').css('opacity', 0.8);
+        // $('li:eq(6)').css('opacity', 0.9);
+        $('li').each(function (x, y) {
+            var n = $('ul li').length
+            var i = (x + 1) / n
+            $(y).css('opacity', i)
+        })
+    </script>
+</body>
+
+</html>
