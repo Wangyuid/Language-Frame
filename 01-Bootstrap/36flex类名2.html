@@ -204,6 +204,68 @@
             <div class="p-2 bg-primary">Flex item 3</div>
         </div>
     </div>
+    <!-- 7、order属性——排序 -->
+    <div class="container">
+        <h4 class="my-3">使用flex-order-*</h4>
+        <div class="d-flex bg-secondary">
+            <div class="order-3 p-2 bg-info">Flex item 1</div>
+            <div class="order-2 p-2 bg-warning">Flex item 2</div>
+            <div class="order-1 p-2 bg-primary">Flex item 3</div>
+        </div>
+    </div>
+
+    <!-- 8、flex-grow和flex-shrink属性——等宽变换 -->
+    <div class="container">
+        <h4 class="my-3">使用flex-grow-*</h4>
+        <div class="d-flex bg-secondary">
+            <div class="p-2 flex-grow-1 bg-info">Flex item 1</div>
+            <div class="p-2 bg-warning">Flex item 2</div>
+            <div class="p-2 bg-primary">Flex item 3</div>
+        </div>
+        <h4 class="my-3">使用flex-shrink-*</h4>
+        <div class="d-flex bg-secondary">
+            <div class="p-2 w-100 bg-warning">Flex item 1</div>
+            <div class="p-2 flex-shrink-1 bg-info">Flex item 2</div>
+        </div>
+    </div>
+    <!-- 9、flex-fill类——自动对等 -->
+    <div class="container">
+        <h4 class="my-3">使用flex-fill</h4>
+        <div class="d-flex bg-secondary">
+            <div class="p-2 flex-fill bg-info">Flex item 1包含更多内容</div>
+            <div class="p-2 flex-fill bg-warning">Flex item 2</div>
+            <div class="p-2 flex-fill bg-primary">Flex item 3</div>
+        </div>
+    </div>
+    <!-- 10、自动外边距 -->
+    <div class="container">
+        <h4 class="my-3">使用mr-auto</h4>
+        <div class="d-flex bg-secondary">
+            <div class="p-2 mr-auto bg-info">Flex item 1</div>
+            <div class="p-2 bg-warning">Flex item 2</div>
+            <div class="p-2 bg-primary">Flex item 3</div>
+        </div>
+        <h4 class="my-3">使用ml-auto</h4>
+        <div class="d-flex bg-secondary">
+            <div class="p-2 bg-info">Flex item 1</div>
+            <div class="p-2  bg-warning">Flex item 2</div>
+            <div class="p-2 ml-auto bg-primary">Flex item 3</div>
+        </div>
+    </div>
+    <div class="container">
+        <h4 class="my-3">使用mb-auto</h4>
+        <div class="d-flex align-items-start flex-column bg-secondary" style="height: 150px;">
+            <div class="mb-auto p-2 bg-info">Flex item 1</div>
+            <div class="p-2 bg-warning">Flex item 2</div>
+            <div class="p-2 bg-primary">Flex item 3</div>
+        </div>
+        <h4 class="my-3">使用mt-auto</h4>
+        <div class="d-flex align-items-end flex-column bg-secondary" style="height: 150px;">
+            <div class="p-2 bg-info">Flex item 1</div>
+            <div class="p-2 bg-warning">Flex item 2</div>
+            <div class="mt-auto p-2 bg-primary">Flex item 3</div>
+        </div>
+    </div>
     <script src="./js/jquery-3.6.3.min.js"></script>
     <script src="./bootstrap/js/bootstrap.min.js"></script>
 </body>

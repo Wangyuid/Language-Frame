@@ -16,11 +16,18 @@
     <button>删除元素</button>
     <button>恢复元素</button>
     <script>
+        var r
+        $('p').click(function () {
+            $('p').html('今天下雨了')
+        })
         $('button:first').click(function () {
-            $('p').remove()
+            // r = $('p').remove()
+            //删除的元素如果有事件触发，detach()删除节点再恢复后，仍然可以触发删除节点的事件，但remove()不可以
+            r = $('p').detach()
         })
         $('button:last').click(function () {
-            $('p')
+            $('div').append(r)
+            // $(r).appendTo('div')
         })
     </script>
 </body>
