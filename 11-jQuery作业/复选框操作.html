@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.3.min.js"></script>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th><input type="checkbox"></th>
+                <th>序号</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>3</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        $(function () {
+            // 获取总复选框和分复选框
+            var allCheckbox = $('thead input[type="checkbox"]');
+            var checkbox = $('tbody input[type="checkbox"]');
+
+            // 点击总复选框
+            allCheckbox.on('click', function () {
+                // 获取总复选框的选中状态
+                var isChecked = $(this).prop('checked');
+                // 将所有分复选框的状态设置为与总复选框相同
+                checkbox.prop('checked', isChecked);
+            });
+
+            // 点击分复选框
+            checkbox.on('click', function () {
+                // 判断所有分复选框是否都被选中
+                var allChecked = true;
+                checkbox.each(function () {
+                    if (!$(this).prop('checked')) {
+                        allChecked = false;
+                        return false;
+                    }
+                });
+                // 将总复选框的状态设置为所有分复选框是否都被选中
+                allCheckbox.prop('checked', allChecked);
+            });
+        });
+    </script>
+</body>
+
+</html>
