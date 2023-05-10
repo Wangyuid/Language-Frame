@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h4>1.左窄右宽</h4>
+        <div class="d-flex flex-row w-75 text-center" style="height:400px;border:1px solid red">
+            <div class="bg-primary w-25">西</div>
+            <div class="bg-warning flex-fill w-75">中</div>
+        </div>
+        <h4>2.左宽右窄</h4>
+        <div class="d-flex flex-row w-50 text-center" style="height:400px;border:1px solid red">
+            <div class="bg-warning w-75">中</div>
+            <div class="bg-primary flex-fill">东</div>
+        </div>
+        <h4>3.上窄下宽</h4>
+        <div class="d-flex flex-column w-50 text-center" style="height:400px;border:1px solid red">
+            <div class="bg-warning h-25">北</div>
+            <div class="bg-primary flex-fill">中</div>
+        </div>
+        <h4>4.上宽下窄</h4>
+        <div class="d-flex flex-column w-50 text-center" style="height:400px;border:1px solid red">
+            <div class="bg-warning h-75">北</div>
+            <div class="bg-success flex-fill">中</div>
+        </div>
+        <h4>5.上中下</h4>
+        <div class="d-flex flex-column w-50 text-center" style="height:400px;border:1px solid red">
+            <div class="bg-secondary h-25">北</div>
+            <div class="bg-warning h-50">中</div>
+            <div class="bg-success flex-fill">南</div>
+        </div>
+        <h4>6.左中右</h4>
+        <div class="d-flex flex-row text-center" style="height:400px;border:1px solid red">
+            <div class="bg-info px-5">西</div>
+            <div class="bg-warning flex-fill">中</div>
+            <div class="bg-primary px-5">东</div>
+        </div>
+        <h4>7.左上下</h4>
+        <div class="d-flex flex-row text-center w-50" style="height:400px;border:1px solid red">
+            <div class="bg-info w-25">西</div>
+            <div class="flex-fill">
+                <div class="d-flex flex-column h-100">
+                    <div class="bg-secondary h-25">北</div>
+                    <div class="bg-warning flex-fill">中</div>
+                </div>
+            </div>
+        </div>
+        <h4>8.上下右</h4>
+        <div class="d-flex flex-row text-center w-50" style="height:400px;border:1px solid red">
+            <div class="flex-fill">
+                <div class="d-flex flex-column h-100">
+                    <div class="bg-warning h-75">中</div>
+                    <div class="bg-success flex-fill">南</div>
+                </div>
+            </div>
+            <div class="bg-primary w-25">东</div>
+        </div>
+        <h4>9.上中下右</h4>
+        <div class="d-flex flex-row text-center w-50" style="height:400px;border:1px solid red">
+            <div class="flex-fill">
+                <div class="d-flex flex-column h-100">
+                    <div class="bg-secondary h-25">北</div>
+                    <div class="bg-warning flex-fill">中</div>
+                    <div class="bg-success h-25">南</div>
+                </div>
+            </div>
+            <div class="bg-primary w-25">东</div>
+        </div>
+        <h4>10.左上中下</h4>
+        <div class="d-flex flex-row text-center w-50" style="height:400px;border:1px solid red">
+            <div class="bg-info w-25">西</div>
+            <div class="flex-fill">
+                <div class="d-flex flex-column h-100">
+                    <div class="bg-secondary h-25">北</div>
+                    <div class="bg-warning flex-fill">中</div>
+                    <div class="bg-success h-25">南</div>
+                </div>
+            </div>
+        </div>
+        <h4>11.上左中右下</h4>
+        <div class="d-flex flex-column text-center" style="height:400px;border:1px solid red">
+            <div class="bg-secondary h-25">北</div>
+            <div class="flex-fill">
+                <div class="d-flex flex-row h-100">
+                    <div class="bg-info px-5">西</div>
+                    <div class="bg-warning flex-fill">中</div>
+                    <div class="bg-primary px-5">东</div>
+                </div>
+            </div>
+            <div class="bg-success h-25">南</div>
+        </div>
+        <h4>12.左中右下</h4>
+        <div class="d-flex flex-column text-center" style="height:400px;border:1px solid red">
+            <div class="flex-fill">
+                <div class="d-flex flex-row h-100">
+                    <div class="bg-info px-5">西</div>
+                    <div class="bg-warning flex-fill">中</div>
+                    <div class="bg-primary px-5">东</div>
+                </div>
+            </div>
+            <div class="bg-success h-25">南</div>
+        </div>
+        <h4>13.上左中右</h4>
+        <div class="d-flex flex-column text-center" style="height:400px;border:1px solid red">
+            <div class="bg-secondary h-25">南</div>
+            <div class="flex-fill">
+                <div class="d-flex flex-row h-100">
+                    <div class="bg-info px-5">西</div>
+                    <div class="bg-warning flex-fill">中</div>
+                    <div class="bg-primary px-5">东</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/jquery-3.6.3.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
