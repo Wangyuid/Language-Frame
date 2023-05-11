@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div class="demo">欢迎你</div>
     <school />
     <student />
   </div>
@@ -17,5 +18,9 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+/* scope只对子文件起作用,对App.vue不起作用 */
+.demo {
+  color: red;
+}
 </style>

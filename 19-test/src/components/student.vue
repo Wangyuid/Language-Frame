@@ -1,6 +1,6 @@
   <!-- 组件结构 -->
 <template>
-  <div>
+  <div class="demo">
     <h4 @click="show">学生:{{ name }}</h4>
     <h4>学校:{{ sex }}</h4>
   </div>
@@ -24,6 +24,9 @@ export default {
   mixins: [hunru],
 };
 </script>
-<style>
+<style scoped>
 /* 组件的样式 */
+.demo {
+  background-color: green;
+}
 </style>
