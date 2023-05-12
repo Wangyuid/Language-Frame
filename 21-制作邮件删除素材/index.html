@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>jQuery 制作邮件删除效果</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="./js/jquery-1.12.4.js"></script>
+</head>
+
+<body>
+  <center>
+    <div class="warp">
+      <p>收件箱</p>
+      <table>
+        <tr>
+          <td>状态</td>
+          <td>发件人</td>
+          <td>主题</td>
+        </tr>
+        <tr>
+          <td><input name="Select" type="checkbox" value="Select"></td>
+          <td>里德</td>
+          <td>周末出去爬山，去吗？</td>
+        </tr>
+        <tr>
+          <td><input name="Select" type="checkbox" value="Select"></td>
+          <td>德培</td>
+          <td>大爷，你的工作报表还没交呐，再不交这个月末你就等shi啦~~~</td>
+        </tr>
+        <tr>
+          <td><input name="Select" type="checkbox" value="Select"></td>
+          <td>Moscow</td>
+          <td>Are you free tomorrow night? I'm wondering if you're free for dinner.</td>
+        </tr>
+        <tr>
+          <td><input name="Select" type="checkbox" value="Select"></td>
+          <td>贱男春</td>
+          <td>一不小心闹饥荒了，求赞助啊大爷！！！</td>
+        </tr>
+        <tr>
+          <td><input name="Select" type="checkbox" value="Select"></td>
+          <td>MO</td>
+          <td>临时有事，今天就不去找你啦，乖乖上班干活哦，不然回来收拾你o(∩_∩)o </td>
+        </tr>
+        <tr>
+          <td><input name="Select" type="checkbox" value="Select"></td>
+          <td>xxxxx公司</td>
+          <td>恭喜你，你获得我们公司的一等奖：价值1000w的宝马一辆！请汇款5000到......</td>
+        </tr>
+      </table>
+      <div>
+        <a><span>全选 / 全不选</span></a>
+        <a><span>删除邮件</span></a>
+      </div>
+    </div>
+  </center>
+  <script>
+    //获取所有复选框
+    var allCheckbox = $('input[type="checkbox"]')
+    //获取全选按钮和删除按钮
+    var fBtn = $('a:first')
+    var lBtn = $('a:last')
+    //给全选按钮添加点击事件
+    fBtn.click(function () {
+      //判断选取状态
+      if (allCheckbox.prop('checked')) {
+        allCheckbox.prop("checked", false);
+      } else {
+        allCheckbox.prop("checked", true);
+      }
+    })
+    //给删除按钮添加点击事件
+    lBtn.click(function () {
+      var isChecked = $("input[name='Select']:checked")
+      //遍历所有复选框元素
+      isChecked.each(function () {
+        //closest()用于查找与选择器匹配的第一个祖先元素，不论它在 DOM 树中的位置如何。
+        $(this).closest('tr').remove();
+      })
+    })
+  </script>
+</body>
+
+</html>
