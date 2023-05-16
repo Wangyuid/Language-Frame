@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>Test</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<script src="./js/jquery-1.12.4.js"></script>
+</head>
+
+<body>
+	<h1>制作留言板前端局部更新效果</h1>
+	<ul>
+		<li>
+			<span>功夫熊猫</span>
+			<p>欢迎你</p>
+		</li>
+	</ul>
+	<form method="post">
+		<h2>Message</h2>
+		<label for="Name">昵称</label>
+		<input type="text" name="Name" class="text" value="你的昵称" />
+		<label for="Content">留言内容</label>
+		<textarea name="Content" class="text" rows="4">你要说的话</textarea>
+		<input type="button" value="单击这里提交留言" />
+	</form>
+	<script>
+		$(':text').focus(function () {
+			var t = $(':text').val()
+			if (t == '你的昵称') {
+				$(':text').val('')
+			}
+		})
+		$(':text').blur(function () {
+			var t = $(':text').val()
+			if (t == '') {
+				$(':text').val('你的昵称')
+			}
+		})
+	</script>
+</body>
+
+</html>
