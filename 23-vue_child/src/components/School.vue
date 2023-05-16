@@ -7,7 +7,7 @@
 <script>
 //组件的交互，数据和方法
 export default {
-    name:'School',
+    name:'School_s',
      data() {
         return{
             cMsg:'子组件要传递当代信息',

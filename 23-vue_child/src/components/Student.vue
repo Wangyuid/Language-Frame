@@ -7,7 +7,7 @@
 <script>
 //组件的交互，数据和方法
 export default {
-    name:'Student',
+    name:'Student_s',
      data() {
         return{
            
