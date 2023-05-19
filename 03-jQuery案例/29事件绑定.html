@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.3.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <p>aaaaa</p>
+    </div>
+    <button>单击</button>
+    <button>解绑</button>
+    <script>
+        // $('button').click(function () {
+        //     alert(111)
+        // })
+        //第一种用法
+        // $('button').on('click', function () {
+        //     alert(111)
+        // })
+        // $('button').mouseover(function () {
+        //     alert(111)
+        // })
+        // $('button').mouseout(function () {
+        //     alert(111)
+        // })
+        //第二种用法
+        // $('button').on('mouseover mouseout', function () {
+        //     alert(111)
+        // })
+        // $('button').mouseover(function () {
+        //     alert(111)
+        // })
+        // $('button').mouseout(function () {
+        //     $(this).css('background', 'red')
+        // })
+        //第三种用法
+        // $('button').on({
+        //     mouseover: function () {
+        //         alert(111)
+        //     }, mouseout: function () {
+        //         $(this).css('background', 'red')
+        //     }
+        // })
+        //第四种用法(新创建的元素可以触发事件)
+        // $('div').on('click', 'p', function () {
+        //     $(this).css('background', 'red')
+        // })
+        // $('button').on('click', function () {
+        //     $('<p>bbbb</p>').appendTo('div')
+        // })
+        //解绑事件
+        $('button:first').on({
+            mouseover: function () {
+                alert(111)
+            }, mouseout: function () {
+                $(this).css('background', 'red')
+            }
+        })
+        $('button:last').click(function () {
+            $('button:first').off()
+        })
+    </script>
+</body>
+
+</html>

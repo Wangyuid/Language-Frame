@@ -37,6 +37,37 @@
 				$(':text').val('你的昵称')
 			}
 		})
+		$('[name=Content]').focus(function () {
+			var t = $('[name=Content]').val()
+			if (t == '你要说的话') {
+				$('[name=Content]').val('')
+			}
+		})
+		$('[name=Content]').blur(function () {
+			var t = $('[name=Content]').val()
+			if (t == '') {
+				$('[name=Content]').val('你要说的话')
+			}
+		})
+		$('[type=button]').click(function () {
+			var name = $(":text").val();
+			var content = $("[name='Content']").val();
+			$("ul li span").text(name);
+			$("ul li p").text(content);
+			$("ul").append(`<li><span>${name}</span><p>${content}</p></li>`);
+			// $(":text").val("你的昵称");
+			// $("[name='Content']").val("你要说的话");
+		})
+		// $(':button').click(function () {
+		// 	var i = $(':text').val()
+		// 	var i1 = $('li').html()
+		// 	i = `${i}${i1}`
+		// 	var t = $('[name=Content]').val()
+		// 	var t1 = $('li').html()
+		// 	t = `${t}${t1}`
+		// 	$('ul').html(`<li>${i}${t}</li>`)
+			// $('p').html(`<li>${t}</li>`)
+		// })
 	</script>
 </body>
 
