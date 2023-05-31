@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.3.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+        }
+
+        p {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>AAAA</p>
+        <p>AAAA</p>
+        <p>AAAA</p>
+    </div>
+    <script>
+        // $('div').click(function () {
+        //     alert(111)
+        // })
+        // $('p').click(function () {
+        //     $(this).css('background', 'yellow')
+        // })
+        // $('p').on('click', fn)
+        // function fn() {
+        //     alert(111)
+        // }
+        // $('p').click(function () {
+        //     $('p').css('width', function (index, value) {
+        //         return parseInt(value) + 10
+        //     })
+        // })
+        $('p').click(function (index, value) {
+            $('p').html(function (x, y) {
+                return y + 'C'
+            })
+        })
+    </script>
+</body>
+
+</html>

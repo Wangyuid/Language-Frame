@@ -55,15 +55,25 @@
         //     $('<p>bbbb</p>').appendTo('div')
         // })
         //解绑事件
-        $('button:first').on({
-            mouseover: function () {
-                alert(111)
-            }, mouseout: function () {
-                $(this).css('background', 'red')
-            }
-        })
-        $('button:last').click(function () {
-            $('button:first').off()
+        //第一种普通解绑
+        // $('button:first').on({
+        //     mouseover: function () {
+        //         alert(111)
+        //     }, mouseout: function () {
+        //         $(this).css('background', 'red')
+        //     }
+        // })
+        // $('button:last').click(function () {
+        //     $('button:first').off()
+        // })
+        //第二种委托解绑
+        // $('div').on('click', 'p', function () {
+        //     $(this).css('background', 'red')
+        // })
+        // $('div').off('click',"**")
+        //one绑定方法，只执行一次，使用方法同one
+        $('button').one('click', function () {
+            alert(111)
         })
     </script>
 </body>
