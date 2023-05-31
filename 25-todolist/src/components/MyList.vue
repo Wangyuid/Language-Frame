@@ -1,6 +1,6 @@
 <template>
   <ul class="todo-main">
-    <MyItem />
+    <MyItem v-for="todoObj in todos" :key="todoObj.id" :todo="todoObj"/>
   </ul>
 </template>
 
@@ -11,10 +11,19 @@ export default {
   components: {
     MyItem,
   },
+  data() {
+    return {
+      todos: [
+        { id: "001", title: "吃饭", done: true },
+        { id: "002", title: "睡觉", done: false },
+        { id: "003", title: "打豆豆", done: true },
+      ],
+    };
+  },
 };
 </script>
 
-<style scope>
+<style scoped>
 /*main*/
 .todo-main {
   margin-left: 0px;

@@ -10,7 +10,7 @@ export default {
 };
 </script>
 
-<style scope>
+<style scoped>
 /*header*/
 .todo-header input {
   width: 560px;

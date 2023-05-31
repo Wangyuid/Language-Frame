@@ -14,7 +14,7 @@ export default {
 };
 </script>
 
-<style scope>
+<style scoped>
 /*footer*/
 .todo-footer {
   height: 40px;
