@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>星级评价</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/jquery-1.12.4.js"></script>
+</head>
+
+<body>
+  <ul class="comment">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+  <script>
+    $('li').mouseover(function () {
+      $(this).addClass('light')
+      $(this).prevAll().addClass('light')//前面的所有元素
+      $(this).nextAll().removeClass('light')//后面的所有元素
+    })
+    $('li').mouseout(function () {
+      $(this).removeClass('light')
+      $(this).prevAll().removeClass('light')
+    })
+    $('li').click(function () {
+      $(this).addClass('light')
+      $(this).prevAll().addClass('light')
+      $(this).nextAll().removeClass('light')
+      $('li').off('mouseover mouseout')
+    })
+  </script>
+</body>
+
+</html>

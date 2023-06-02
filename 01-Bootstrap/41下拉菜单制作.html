@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h3 class="text-primary">导航写法1:使用列表+超链接</h3>
+        <ul class="nav nav-tabs">
+            <li class="nav-item"><a href="#" class="nav-link active">HTML</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">CSS</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Javascript</a></li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Bootstrap</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#" class="dropdown-item">栅格系统</a></li>
+                    <li class="dropdown-divider"></li>
+                    <li><a href="#" class="dropdown-item">CSS布局</a></li>
+                    <li class="dropdown-divider"></li>
+                    <li><a href="#" class="dropdown-item">组件</a></li>
+                    <li class="dropdown-divider"></li>
+                    <li><a href="#" class="dropdown-item">Javascript插件</a></li>
+                </ul>
+            </li>
+        </ul>
+        <h3 class="text-primary">导航写法2:使用nav+超链接</h3>
+        <nav class="nav nav-tabs">
+            <a href="#" class="nav-link active">HTML</a>
+            <a href="#" class="nav-link">CSS</a>
+            <a href="#" class="nav-link">Javascript</a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Bootstrap</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#" class="dropdown-item">栅格系统</a></li>
+                    <li class="dropdown-divider"></li>
+                    <li><a href="#" class="dropdown-item">CSS布局</a></li>
+                    <li class="dropdown-divider"></li>
+                    <li><a href="#" class="dropdown-item">组件</a></li>
+                    <li class="dropdown-divider"></li>
+                    <li><a href="#" class="dropdown-item">Javascript插件</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- 下拉菜单 -->
+    <!-- <div class="dropdown ml-2 mt-2">
+        <button class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown">系统设置</button>
+        <ul class="dropdown-menu">
+            <li class="dropdown-header"><a href="#" class="dropdown-item">基础设置</a></li>
+            <li><a href="#" class="dropdown-item">画面设置</a></li>
+            <li><a href="#" class="dropdown-item">声音设置</a></li>
+            <li><a href="#" class="dropdown-item">网络设置</a></li>
+            <li class="dropdown-divider"></li>
+            <li class="dropdown-header"><a href="#" class="dropdown-item">高级设置</a></li>
+        </ul>
+    </div> -->
+    <script src="./js/jquery-3.6.3.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
