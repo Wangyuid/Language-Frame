@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-1.12.4.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+
+        p {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p></p>
+    </div>
+    <h1>AAA</h1>
+    <script>
+        //区分mouseover和mouseenter
+        //会触发冒泡，移入到任一子元素都会触发事件
+        // $('div').mouseover(function () {
+        //     var t = $('h1').html()
+        //     $('h1').html(t + 'B')
+        // })
+        // $('div').mouseout(function () {
+        //     var t = $('h1').html()
+        //     $('h1').html(t + 'B')
+        // })
+        //不会触发冒泡，仅当进入该元素时触发事件
+        $('div').mouseenter(function () {
+            var t = $('h1').html()
+            $('h1').html(t + 'B')
+        })
+        // $('div').mouseleave(function () {
+        //     var t = $('h1').html()
+        //     $('h1').html(t + 'B')
+        // })
+    </script>
+</body>
+
+</html>

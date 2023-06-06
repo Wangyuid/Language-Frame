@@ -19,19 +19,25 @@
   <script>
     $('li').mouseover(function () {
       $(this).addClass('light')
-      $(this).prevAll().addClass('light')//前面的所有元素
-      $(this).nextAll().removeClass('light')//后面的所有元素
+      $(this).prevAll('li').addClass('light')//前面的所有元素
+      $(this).nextAll('li').removeClass('light')//后面的所有元素
     })
     $('li').mouseout(function () {
-      $(this).removeClass('light')
-      $(this).prevAll().removeClass('light')
+      $('li').removeClass('light')
+      $('li[value = 1]').addClass('light')
+      $('li[value = 1]').prevAll('li').addClass('light')
     })
     $('li').click(function () {
-      $(this).addClass('light')
-      $(this).prevAll().addClass('light')
-      $(this).nextAll().removeClass('light')
-      $('li').off('mouseover mouseout')
+      $(this).attr('value', '1')
+      // $(this).prevAll().Attr('value', '1')
+      $(this).siblings('li').removeAttr('value')
     })
+    // $('li').click(function () {
+    //   $(this).addClass('light')
+    //   $(this).prevAll().addClass('light')
+    //   $(this).nextAll().removeClass('light')
+    //   $('li').off('mouseover mouseout')
+    // })
   </script>
 </body>
 
